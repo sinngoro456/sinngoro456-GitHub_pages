@@ -1,6 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { useEffect, useState } from 'react'
 import { MainBg } from '#/component/MainBg.tsx';
+import { MainText } from '#/component/MainText.tsx';
 
 export const Route = createFileRoute('/')({ component: Home })
 
@@ -43,21 +44,45 @@ function Home() {
   return (
     <div className="flex flex-col items-center">
       <div className="relative h-screen w-full overflow-hidden">
-        <MainBg activeImageIndex={activeImageIndex}/>
-        <div className="absolute inset-0 flex items-center justify-center text-center text-white text-4xl font-bold">
-          <div
-            className="inline-block [writing-mode:vertical-rl] text-2xl"
-            style={{
+        <div className="flex">
+          <div className="absolute p-4 text-center text-white text-xl"
+          style={{
               fontFamily: '"JTCナミキ特太楷書", serif',
-              textShadow: '0 0 0.5px rgba(0, 0, 0, 0.35)',
               opacity: textOpacity,
-            }}
-          >
-            <span>総本宮 京都</span>
-            <br />
-            <span className="text-5xl">愛宕神社</span>
+            }}>
+            愛宕神社について
+          </div>
+          <div className="absolute p-4 text-center text-white text-xl"
+          style={{
+              fontFamily: '"JTCナミキ特太楷書", serif',
+              opacity: textOpacity,
+            }}>
+            愛宕神社について
+          </div>
+          <div className="absolute p-4 text-center text-white text-xl"
+          style={{
+              fontFamily: '"JTCナミキ特太楷書", serif',
+              opacity: textOpacity,
+            }}>
+            愛宕神社について
+          </div>
+          <div className="absolute p-4 text-center text-white text-xl"
+          style={{
+              fontFamily: '"JTCナミキ特太楷書", serif',
+              opacity: textOpacity,
+            }}>
+            愛宕神社について
+          </div>
+          <div className="absolute p-4 text-center text-white text-xl"
+          style={{
+              fontFamily: '"JTCナミキ特太楷書", serif',
+              opacity: textOpacity,
+            }}>
+            愛宕神社について
           </div>
         </div>
+        <MainBg activeImageIndex={activeImageIndex}/>
+        <MainText textOpacity={textOpacity} />
       </div>
       <div className="mt-4 text-center text-lg text-gray-700">
         <p>愛宕神社は、京都市右京区嵯峨にある神社で、火防の神として知られています。</p>
